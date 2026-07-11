@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register UI</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <h1>Register</h1>
+        
+        <!-- Error/Success Messages -->
+        <p id="message" class="error-text"></p>
+
+        <form id="register-form">
+            <div class="input-box">
+                <label>Email</label>
+                <div class="input-field">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="email" id="reg-email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="reg-password" placeholder="Minimum 8 characters, 1 number" required>
+                </div>
+            </div>
+
+            <button type="submit">REGISTER</button>
+        </form>
+
+        <p class="register" style="margin-top: 30px;">
+            Already have an account?
+            <a href="index.html">Login</a>
+        </p>
+    </div>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>
