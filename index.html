@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login UI</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <h1>Login</h1>
+        
+        <!-- Error Message Display Area -->
+        <p id="error-msg" class="error-text"></p>
+
+        <form id="login-form">
+            <div class="input-box">
+                <label>Email</label>
+                <div class="input-field">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="Type your password" required>
+                </div>
+            </div>
+
+          <!-- index.html mein is line ko update karein -->
+<div class="forgot">
+    <a href="forgot.html">Forgot password?</a>
+</div>
+            <button type="submit">LOGIN</button>
+        </form>
+
+        <p class="or">Or Sign Up Using</p>
+
+       <!-- index.html mein social icons wala section aise update karein -->
+<div class="social-icons">
+    <i class="fab fa-facebook-f" id="fb-login" title="Sign up with Facebook"></i>
+    <i class="fab fa-twitter" id="tw-login" title="Sign up with Twitter"></i>
+    <i class="fab fa-google" id="google-login" title="Sign up with Google"></i>
+</div>
+        <p class="register">
+            Don't have an account?
+            <a href="register.html">Register</a>
+        </p>
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

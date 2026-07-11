@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+   background: url("./background.png") center center/cover no-repeat;
+
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+
+    width:420px;
+    background:#fff;
+
+    border-radius:10px;
+    padding:45px 40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.login-box h1{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:42px;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.input-field{
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid #ccc;
+}
+
+.input-field i{
+    color:#888;
+    margin-right:10px;
+}
+
+.input-field input{
+
+    width:100%;
+    border:none;
+    outline:none;
+    padding:12px 0;
+    font-size:15px;
+}
+
+.forgot{
+    text-align:right;
+    margin:10px 0 30px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+button{
+
+    width:100%;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#18344c,#8b1c26);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.or{
+
+    text-align:center;
+    margin:35px 0 20px;
+    color:#666;
+}
+
+.social-icons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.social-icons i{
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#777;
+    color:white;
+
+    border-radius:50%;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.social-icons i:hover{
+
+    background:#222;
+}
+
+.register{
+
+    text-align:center;
+    font-size:15px;
+}
+
+.register a{
+
+    text-decoration:none;
+    color:#000;
+    font-weight:bold;
+}
+/* Custom status styling rules for errors and notifications */
+.error-text {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #8b1c26; /* Matches your theme dark red */
+}
+
+.success-text {
+    color: #2e7d32; /* Soft alert green */
+}
