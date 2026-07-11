@@ -1,44 +1,36 @@
-## Social Login Simulation
+# 🔐 Secure Client-Side Authentication System
 
-This project includes a simulated social login system for Google, Facebook, and Twitter. It checks if the social user already exists in `localStorage`. If not, it creates a dummy user, generates a session token, and redirects the user to the dashboard.
+A clean, modern, and highly secure client-side User Authentication System built using HTML5, CSS3, and Vanilla JavaScript. This project demonstrates secure password management using native browser cryptographic hashing alongside session handling.
 
-```javascript
-// === SOCIAL LOGINS SIMULATION ===
+---
 
-// Common function jo check karegi ya dummy user create karke direct login karwayegi
-function handleSocialLogin(providerName, defaultEmail) {
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+## ✨ Features
 
-    // Check karein kya yeh social user pehle se hamare database mein register hai?
-    const userExists = users.some(user => user.email === defaultEmail);
+*   **User Registration:** Secure signup form with real-time field validation.
+*   **Password Policy:** Enforces strong passwords (minimum 8 characters with at least 1 numeric digit).
+*   **Duplicate Prevention:** Checks the database in real-time to prevent multiple accounts with the same email.
+*   **Secure Authentication:** User login validation against storage records.
+*   **Cryptographic Hashing:** Passwords are never stored in plain text; they are encrypted using **SHA-256** via the native Web Crypto API.
+*   **Generic Error Messages:** Protects against user-scraping or brute-force attacks by showing ambiguous error states.
+*   **Protected Dashboard Route:** Restricts access to the internal dashboard unless a valid local session token is active.
+*   **Account Recovery:** Localized "Forgot Password" workflow allowing secure identity updates.
+*   **Social Auth Simulation:** Interactive mock-up flows for Google, Facebook, and Twitter logins.
 
-    if (!userExists) {
-        // Agar user pehle se nahi hai, toh dummy random password ke sath database mein save kar dein
-        users.push({
-            email: defaultEmail,
-            password: "social_oauth_secure_token_" + Math.random().toString(36).substring(7)
-        });
-        localStorage.setItem("users", JSON.stringify(users));
-    }
+---
 
-    // Alert message aur direct dashboard par transfer
-    alert(`${providerName} Authentication Successful!\nLogging in as: ${defaultEmail}`);
+## 📂 Project Structure
 
-    // Create Session Token and Redirect
-    localStorage.setItem("sessionToken", btoa(defaultEmail + Date.now()));
-    window.location.href = "dashboard.html";
-}
-
-// Click Events listening
-document.getElementById("google-login").addEventListener("click", () => {
-    handleSocialLogin("Google", "user.google@gmail.com");
-});
-
-document.getElementById("fb-login").addEventListener("click", () => {
-    handleSocialLogin("Facebook", "user.facebook@fb.com");
-});
-
-document.getElementById("tw-login").addEventListener("click", () => {
-    handleSocialLogin("Twitter", "user.twitter@x.com");
-});
-```
+```text
+LOGIN UI PAGE/
+├── node_modules/
+├── public/
+│   ├── background.png      # Beautiful mountain backdrop UI wallpaper
+│   ├── index.html          # Main Secure Login Portal
+│   ├── register.html       # Account Registration Page
+│   ├── forget.html         # Self-service Password Reset View
+│   ├── dashboard.html      # Protected Member Area
+│   ├── style.css           # Global Styled Stylesheet UI Layout
+│   ├── login.js            # Login validations and session handling
+│   ├── register.js         # Signup restrictions and SHA-256 pipeline
+│   └── forget.js           # Password recovery encryption handler
+└── README.md               # Documentation (This file)
